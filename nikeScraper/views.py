@@ -97,7 +97,6 @@ def get_shoe_details(request):
  return HttpResponse("Done!")
 
 def get_shoe(request, category):
-  print(category.title())
   all_shoe_results = Shoes.objects.filter(category__contains=category.title())
   print(all_shoe_results)
   return HttpResponse(all_shoe_results)
